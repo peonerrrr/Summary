@@ -340,7 +340,7 @@ text-align:center;
 		bottom: 38.25%;
 	}
 }
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 754px) {
 	.container-top-text::after {
 		bottom: 49.25%;
 	}
