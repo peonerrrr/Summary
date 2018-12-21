@@ -88,7 +88,7 @@ li {
 	animation-fill-mode: forwards;
 }
 .rotateShowY {
-	animation: rotateShowY 1s;
+	animation: rotateShowY 1.3s;
 	animation-fill-mode: forwards;
 }
 .rotateHideY {
@@ -96,8 +96,9 @@ li {
 	animation-fill-mode: forwards;
 }
 .rotateShowX {
-	animation: rotateShowX 1s;
+	animation: rotateShowX 1.3s;
 	animation-fill-mode: forwards;
+	background-color: #cfc91d;
 }
 .rotateHideX {
 	animation: rotateHideX 1s;
@@ -112,14 +113,14 @@ li {
 	animation-fill-mode: forwards;
 }
 @keyframes rotateShowY {
-from {top: 4px;}
-50% {top: calc(50% - 1px);}
-to {transform: rotate(45deg);top: calc(50% - 1px);}
+from {top: 4px;background-color: #fff;}
+50% {top: calc(50% - 1px);background-color: #ECE76F;}
+to {transform: rotate(45deg);top: calc(50% - 1px); background-color: #cfc91d;}
 }
 @keyframes rotateShowX {
-from {bottom: 3px;}
-50% {bottom: calc(50% - 1px);}
-to {transform: rotate(-45deg);bottom: calc(50% - 1px);}
+from {bottom: 3px; background-color: #fff;}
+50% {bottom: calc(50% - 1px); background-color: #ECE76F;}
+to {transform: rotate(-45deg);bottom: calc(50% - 1px); background-color: #cfc91d;}
 }
 @keyframes displayShow {
 from {opacity: 1;}
@@ -127,7 +128,7 @@ from {opacity: 1;}
 to {opacity: 0;}
 }
 @keyframes rotateHideY {
-from {transform: rotate(45deg);top: calc(50% - 1px);}
+from {transform: rotate(45deg);top: calc(50% - 1px); }
 50% {top: calc(50% - 1px);}
 to {top: 4px;}
 }
