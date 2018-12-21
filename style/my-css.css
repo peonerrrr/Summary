@@ -16,13 +16,46 @@ li {
 }
 
 /***************HEADER******************/
+.button-close {
+	position: relative;
+	cursor: pointer;
+	background-color: transparent;
+	color: white;
+	border:0;
+	padding: 0;
+	display: none;
+	z-index: 100;
+	width: 23.35px;
+	height: 35px;
+	top: 18px;
+}
+.button-close::before {
+	content: "";
+	position: absolute;
+	width: 23px;
+	height: 2px;
+	background-color: #fff;
+	top: 0;
+	right: 0;
+	transform: rotate(-45deg);
+}
+.button-close::after {
+	content: "";
+	position: absolute;
+	width: 23px;
+	height: 2px;
+	background-color: #fff;
+	top: 0;
+	right: 0;
+	transform: rotate(45deg);
+}
 .show-btn {
 	cursor: pointer;
 	background-color: transparent;
 	color: white;
 	border:0;
 	padding: 0;
-	font-size: 20px;
+	font-size: 26px;
 	display: none;
 	z-index: 100;
 }
@@ -375,6 +408,9 @@ text-align:center;
 	}
 	.show-btn {
 		display: block;
+		margin: 0 auto;
+	}
+	.button-close {
 		margin: 0 auto;
 	}
 	.header-logo {
