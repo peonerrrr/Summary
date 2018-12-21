@@ -26,8 +26,8 @@ li {
 	display: none;
 	z-index: 100;
 	width: 23.35px;
-	height: 35px;
-	top: 18px;
+	height: 25px;
+	padding-top: 10px;
 }
 .button-close::before {
 	content: "";
@@ -38,6 +38,7 @@ li {
 	top: 0;
 	right: 0;
 	transform: rotate(-45deg);
+	top: 18px;
 }
 .button-close::after {
 	content: "";
@@ -48,16 +49,97 @@ li {
 	top: 0;
 	right: 0;
 	transform: rotate(45deg);
+	top: 18px;
 }
 .show-btn {
+	position: relative;
 	cursor: pointer;
 	background-color: transparent;
 	color: white;
-	border:0;
-	padding: 0;
-	font-size: 26px;
+	width: 23.35px;
+	height: 25px;
 	display: none;
 	z-index: 100;
+}
+.center-line {
+	position: absolute;
+	width: 23px;
+	height: 2px;
+	top: calc(50% - 1px);
+	background-color: #fff;
+	animation-fill-mode: forwards;
+}
+.top-line {
+	content: "";
+	position: absolute;
+	width: 23px;
+	height: 2px;
+	top: 4px;
+	background-color: #fff;
+	animation-fill-mode: forwards;
+}
+.bottom-line {
+	content: "";
+	position: absolute;
+	width: 23px;
+	height: 2px;
+	bottom: 3px;
+	background-color: #fff;
+	animation-fill-mode: forwards;
+}
+.rotateShowY {
+	animation: rotateShowY 1s;
+	animation-fill-mode: forwards;
+}
+.rotateHideY {
+	animation: rotateHideY 1s;
+	animation-fill-mode: forwards;
+}
+.rotateShowX {
+	animation: rotateShowX 1s;
+	animation-fill-mode: forwards;
+}
+.rotateHideX {
+	animation: rotateHideX 1s;
+	animation-fill-mode: forwards;
+}
+.displayShow {
+	animation: displayShow 0.3s;
+	animation-fill-mode: forwards;
+}
+.displayHide {
+	animation: displayHide 0.3s;
+	animation-fill-mode: forwards;
+}
+@keyframes rotateShowY {
+from {top: 4px;}
+50% {top: calc(50% - 1px);}
+to {transform: rotate(45deg);top: calc(50% - 1px);}
+}
+@keyframes rotateShowX {
+from {bottom: 3px;}
+50% {bottom: calc(50% - 1px);}
+to {transform: rotate(-45deg);bottom: calc(50% - 1px);}
+}
+@keyframes displayShow {
+from {opacity: 1;}
+50% {opacity: 0.5;}
+to {opacity: 0;}
+}
+@keyframes rotateHideY {
+from {transform: rotate(45deg);top: calc(50% - 1px);}
+50% {top: calc(50% - 1px);}
+to {top: 4px;}
+}
+@keyframes rotateHideX {
+from {transform: rotate(-45deg);bottom: calc(50% - 1px);}
+50% {bottom: calc(50% - 1px);}
+to {bottom: 3px;}
+}
+@keyframes displayHide {
+from {opacity: 0;}
+50% {opacity: 0.5;}
+to {opacity: 1;}
 }
 .button {
 	padding-top: 17px;
@@ -70,6 +152,7 @@ li {
 	text-align: center;
 }
 .navbar {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
