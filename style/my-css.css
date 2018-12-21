@@ -354,12 +354,18 @@ text-align:center;
 	.navbar {
 	}
 }
+@media screen and (min-width: 755px) {
+	.navbar-items {
+		display: flex !important;
+	}
+}
 @media screen and (max-width: 754px) {
 	.container-top-text::after {
 		bottom: 49.25%;
 	}
 	.navbar-items {
 		flex-direction: column;
+		display: none;
 	}
 	.navbar-items li a:last-child {
 		padding: 15px;
