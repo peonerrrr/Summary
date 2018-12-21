@@ -391,6 +391,12 @@ text-align:center;
 	.navbar-items {
 		display: flex !important;
 	}
+	.show-btn {
+		display: none !important;
+	}
+	.button-close {
+		display: none !important;
+	}
 }
 @media screen and (max-width: 754px) {
 	.container-top-text::after {
