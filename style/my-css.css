@@ -16,7 +16,19 @@ li {
 }
 
 /***************HEADER******************/
-
+.show-btn {
+	cursor: pointer;
+	background-color: transparent;
+	color: white;
+	border:0;
+	padding: 0;
+	font-size: 20px;
+	display: none;
+	z-index: 100;
+}
+.button {
+	padding-top: 17px;
+}
 .navigation {
 	background-color: #02918c;
 }
@@ -339,19 +351,25 @@ text-align:center;
 	.container-top-text::after {
 		bottom: 38.25%;
 	}
+	.navbar {
+	}
 }
 @media screen and (max-width: 754px) {
 	.container-top-text::after {
 		bottom: 49.25%;
 	}
 	.navbar-items {
-		display: block;
+		flex-direction: column;
 	}
 	.navbar-items li a:last-child {
 		padding: 15px;
 	}
 	.navbar {
 		display: block;
+	}
+	.show-btn {
+		display: block;
+		margin: 0 auto;
 	}
 	.header-logo {
 		display: block;
