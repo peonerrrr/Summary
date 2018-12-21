@@ -266,7 +266,8 @@ main{
 	font-size: 11px;
 	line-height: 21px;
 	padding: 40px 50px;
-	width: 288px;
+	width: 25%;
+	min-width: 288px;
 }
 .features-item h3{
 	font-size: 16px;
@@ -518,16 +519,22 @@ text-align:center;
 		bottom: 44.25%;
 	}
 }
-
+@media screen and (max-width: 594px) {
+	.features-item {
+		width: 100%;
+		padding: 30px 70px;
+	}
+}
 @media screen and (max-width: 500px) {
 	.container-top-text::after {
 		bottom: 51.25%;
 	}
 	.services-item {
 		width: 100%;
+		padding: 15px;
 	}
 	.left-section {
-		padding: 30px;
+		padding: 30px 40px;
 		text-align: center;
 	}
 	.top-container h2 {
@@ -545,9 +552,6 @@ text-align:center;
 		letter-spacing: 1px;
 		margin: 15px 0;
 		padding: 0;
-	}
-	.features-item {
-		padding: 15px;
 	}
 }
 @media screen and (max-width: 334px) {
