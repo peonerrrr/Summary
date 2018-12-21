@@ -16,42 +16,9 @@ li {
 }
 
 /***************HEADER******************/
-.button-close {
-	position: relative;
-	cursor: pointer;
-	background-color: transparent;
-	color: white;
-	border:0;
-	padding: 0;
-	display: none;
-	z-index: 100;
-	width: 23.35px;
-	height: 25px;
-	padding-top: 10px;
-}
-.button-close::before {
-	content: "";
-	position: absolute;
-	width: 23px;
-	height: 2px;
-	background-color: #fff;
-	top: 0;
-	right: 0;
-	transform: rotate(-45deg);
-	top: 18px;
-}
-.button-close::after {
-	content: "";
-	position: absolute;
-	width: 23px;
-	height: 2px;
-	background-color: #fff;
-	top: 0;
-	right: 0;
-	transform: rotate(45deg);
-	top: 18px;
-}
 .show-btn {
+	margin: 10px auto;
+	padding: 0;
 	position: relative;
 	cursor: pointer;
 	background-color: transparent;
@@ -59,7 +26,10 @@ li {
 	width: 23.35px;
 	height: 25px;
 	display: none;
-	z-index: 100;
+	border: none;
+}
+.show-btn:focus {
+	outline: 1px solid #cfc91d;
 }
 .center-line {
 	position: absolute;
@@ -151,25 +121,44 @@ to {opacity: 1;}
 .navbar-items {
 	display: flex;
 	text-align: center;
+	justify-content: space-between;
+	align-items: center;
+	width: 550px;
 }
 .navbar {
+	overflow: hidden;
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 	width: 92.734375%;
 	margin: 0 auto;
 }
+.navbar-items li {
+	width: 20%;
+	box-sizing: border-box;
+}
 .navbar-items li a{
+	border-radius: 50%;
+	width: 100%;
+	padding: 23px 0;
 	display: inline-block;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #fff;
 	font-size: 12px;
-	padding: 23px 53px;
 }
-.navbar-items li a:last-child{
+.navbar-items li:last-child{
 	padding-right: 0;
+}
+.navbar-items li a:hover {
+	transition: all 0.4s ease;
+	background-color: #cfc91d;
+}
+.navbar-items li a:not(:hover) {
+	transition: all 0.4s ease;
+	background-color: #02918c;
 }
 .header-logo {
 	margin: 0;
@@ -177,7 +166,6 @@ to {opacity: 1;}
 	text-transform: uppercase;
 	font-weight: 900;
 	color: #fff;
-	padding-top: 13px;
 	font-size: 26.18px;
 }
 .header-logo span{
@@ -489,16 +477,24 @@ text-align:center;
 	.navbar-items {
 		flex-direction: column;
 		display: none;
+		width: 100%;
+		margin: 0 auto;
 	}
-	.navbar-items li a:last-child {
-		padding: 15px;
+	.navbar-items li a{
+		width: 100%;
+		padding: 15px 0;
+	}
+	.navbar-items li {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+		box-sizing: border-box;
 	}
 	.navbar {
 		display: block;
 	}
 	.show-btn {
 		display: block;
-		margin: 0 auto;
 	}
 	.button-close {
 		margin: 0 auto;
